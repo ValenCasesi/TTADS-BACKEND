@@ -1,0 +1,38 @@
+### obtener todos los djs
+GET http://localhost:3000/api/djs
+
+
+### obtener un dj
+GET http://localhost:3000/api/djs/651eb2520a63c629589e308d
+
+### crear un nuevo dj
+POST http://localhost:3000/api/djs/
+Content-Type: application/json
+
+{
+  "nombre": "JUANIIII",
+  "instagram": "JUANINEWELS",
+  "tel": 345345
+}
+
+### modificar un dj (PUT - recurso completo e idempotente)
+PUT http://localhost:3000/api/djs/651b7e7b6ea06e4c780463e1
+Content-Type: application/json
+
+{
+  "nombre": "brandom",
+  "instagram": "borra",
+  "tel": 12412
+}
+
+### modificar un dj (PATCH - recurso parcial)
+PATCH http://localhost:3000/api/djs/652493c1d8629a6c0d87f231
+Content-Type: application/json
+
+{
+  "nombre": "JUANIIII",
+  "instagram": "JUANINEWELS"
+}
+
+### borrar un dj
+DELETE http://localhost:3000/api/djs/651b7e7b6ea06e4c780463e1

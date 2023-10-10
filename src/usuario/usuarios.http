@@ -1,0 +1,39 @@
+### obtener todos los usuarios
+GET http://localhost:3000/api/usuarios
+
+
+### obtener un usuario
+GET http://localhost:3000/api/usuarios/651ed515018636bef288501f
+
+### crear un nuevo usuario
+POST http://localhost:3000/api/usuarios/
+Content-Type: application/json
+
+{
+  "nombreUsu": "Valentino",
+  "password": "123",
+  "voto": false,
+  "tipo": "Administrador"
+}
+
+### modificar un usuario (PUT - recurso completo e idempotente)
+PUT http://localhost:3000/api/usuarios/651ed515018636bef288501f
+Content-Type: application/json
+
+{
+  "nombreUsu": "kob",
+  "password": "123",
+  "voto": true,
+  "tipo": "Administrador"
+}
+
+### modificar un usuario (PATCH - recurso parcial)
+PATCH http://localhost:3000/api/usuarios/651ed515018636bef288501f
+Content-Type: application/json
+
+{
+  "nombreUsu": "Valentino"
+}
+
+### borrar un usuario
+DELETE http://localhost:3000/api/usuarios/651ed515018636bef288501f

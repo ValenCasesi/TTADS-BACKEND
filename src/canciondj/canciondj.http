@@ -1,0 +1,36 @@
+### obtener todas las cancionesDJ
+GET http://localhost:3000/api/canciondj
+
+
+### obtener una cancionesDJ
+GET http://localhost:3000/api/canciondj/651ec1d589c709f42ee3ff5f
+
+### crear un nueva cancionesDJ 
+POST http://localhost:3000/api/canciondj/
+Content-Type: application/json
+
+{
+  "cancion":"651ec1d589c709f42ee3ff5f",
+  "dj":"651ec1f83cb3bf1c7b75f556",
+  "fechaNoche":"9/10",
+  "puntaje":"7"
+}
+### modificar una cancionesDJ (PUT - recurso completo e idempotente)
+PUT http://localhost:3000/api/canciondj/651ec2e13cb3bf1c7b75f558
+Content-Type: application/json
+
+{
+  "nombre": "bzrp #53"
+}
+
+### modificar una cancionesDJ (PATCH - recurso parcial)
+PATCH http://localhost:3000/api/canciondj/651ec2e13cb3bf1c7b75f558
+Content-Type: application/json
+
+{
+  "nombre": "kou",
+  "cantante": "Valen"
+}
+
+### borrar una cancionesDJ
+DELETE http://localhost:3000/api/canciondj/651ec2e13cb3bf1c7b75f558
