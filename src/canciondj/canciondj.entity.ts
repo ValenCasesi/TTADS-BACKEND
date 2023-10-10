@@ -9,7 +9,7 @@ export class cancionDj {
           $ref:"dj",
           djId:ObjectId},
     public fechaNoche: string,
-    public puntaje: number,
+    public puntaje?: number,
     public _id?: ObjectId,
   ) {}
 }
